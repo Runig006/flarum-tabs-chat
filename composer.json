@@ -7,7 +7,9 @@
     "type": "flarum-extension",
     "version": "1.0.0",
     "require": {
-      "flarum/core": "^1.2.0"
+      "flarum/core": "^1.2.0",
+      "xelson/flarum-ext-chat": "*",
+      "acpl/mobile-tab": "*"
     },
     "autoload": {
       "psr-4": {
