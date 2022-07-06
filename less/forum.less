@@ -1,0 +1,46 @@
+.MobileTab-items{
+    .item-chat .Button {
+        position: relative;
+        background-color: transparent;
+    }
+
+    .item-chat .unread{
+        top: 2px;
+    }
+
+    .item-notifications .unread{
+        top: -33px;
+    }
+    
+    .unread{
+        position: absolute;
+        left: 70%;
+        
+        min-width: 16px;
+        height: 16px;
+       
+        padding: 2px 4px 3px;
+       
+        border-radius: 10px;
+    
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1em;
+
+        background: var(--header-control-color);
+        color: var(--header-bg);
+        box-shadow: 0 0 0 1px var(--header-bg);
+    }
+}
+
+.NeonChatFrame.hidden {
+    z-index: -999;
+}
+
+@media (max-width: 768px) {
+    .NeonChatFrame .button-fixed-maximize {
+        display: none;
+    }
+}
+
