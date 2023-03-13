@@ -9,7 +9,6 @@ app.initializers.add('runig006/flarum-tabs-chat', () => {
     const MobileTabItem = components.components.MobileTabItem;
 
     extend(MobileTab.prototype, 'items', (items) => {
-      //items.remove('notifications');
       items.add(
         'notifications',
         <LinkButton
@@ -18,7 +17,7 @@ app.initializers.add('runig006/flarum-tabs-chat', () => {
           title={app.translator.trans('core.forum.notifications.title')}
           className="Dropdown NotificationsDropdown"
         >
-          <span className="unread">0</span>
+          <span className="unread">{app.session.user.unreadNotificationCount()}</span>
           {app.translator.trans('core.forum.notifications.title')}
         </LinkButton>,
         80
@@ -28,7 +27,7 @@ app.initializers.add('runig006/flarum-tabs-chat', () => {
         <span class="Button" onclick={() => app.chat.toggleChat()}>
           <i aria-hidden="true" class="icon fas fa-comment Button-icon"></i>
           <span class="Button-label">
-            <span className="unread">0</span>
+            <span className="unread">{app.chat.getUnreadedTotal()}</span>
             Chat
           </span>
         </span>, 80);
