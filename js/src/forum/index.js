@@ -17,7 +17,7 @@ app.initializers.add('runig006/flarum-tabs-chat', () => {
           title={app.translator.trans('core.forum.notifications.title')}
           className="Dropdown NotificationsDropdown"
         >
-          <span className="unread">{app.session.user.unreadNotificationCount()}</span>
+          <span className="unread">{(app.session.user) ? app.session.user.unreadNotificationCount() : 0 }</span>
           {app.translator.trans('core.forum.notifications.title')}
         </LinkButton>,
         80
