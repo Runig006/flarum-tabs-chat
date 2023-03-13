@@ -17,7 +17,7 @@ app.initializers.add('runig006/flarum-tabs-chat', () => {
           title={app.translator.trans('core.forum.notifications.title')}
           className="Dropdown NotificationsDropdown"
         >
-          <span className="unread">{(app.session.user) ? app.session.user.unreadNotificationCount() : 0 }</span>
+          <span className="unread">{(app.session.user) ? app.session.user.unreadNotificationCount() : 0}</span>
           {app.translator.trans('core.forum.notifications.title')}
         </LinkButton>,
         80
@@ -27,7 +27,7 @@ app.initializers.add('runig006/flarum-tabs-chat', () => {
         <span class="Button" onclick={() => app.chat.toggleChat()}>
           <i aria-hidden="true" class="icon fas fa-comment Button-icon"></i>
           <span class="Button-label">
-            <span className="unread">{app.chat.getUnreadedTotal()}</span>
+            <span className="unread">{(app.chat) ? app.chat.getUnreadedTotal() : 0}</span>
             Chat
           </span>
         </span>, 80);
