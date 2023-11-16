@@ -1,11 +1,11 @@
 {
     "name": "runig006/add-chat-tab",
+    "version": "1.0.0",
     "description": "Add the chat button to the movile tab",
     "keywords": [
       "flarum"
     ],
     "type": "flarum-extension",
-    "version": "1.0.0",
     "require": {
       "flarum/core": "^1.2.0",
       "xelson/flarum-ext-chat": "*",
@@ -19,11 +19,11 @@
     "extra": {
       "flarum-extension": {
         "title": "Chat Tab",
-        "category": "feature",
+        "category": "theme",
         "icon": {
-            "name": "fas fa-chat",
+            "name": "fas fa-comments",
             "backgroundColor": "#f70",
-            "color": "#3a98d0"
+            "color": "#ffffff"
         }
       }
     }
